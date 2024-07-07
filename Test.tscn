@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://cktrywspdk7ax"]
+
+[ext_resource type="Script" path="res://Test.cs" id="1_0fhir"]
+
+[node name="Test" type="Node2D" node_paths=PackedStringArray("myLabel", "myTimer")]
+script = ExtResource("1_0fhir")
+myLabel = NodePath("Label")
+myTimer = NodePath("Timer")
+
+[node name="Label" type="Label" parent="."]
+z_index = 10
+z_as_relative = false
+offset_right = 338.0
+offset_bottom = 84.0
+
+[node name="ColorRect" type="ColorRect" parent="Label"]
+z_index = -1
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 57.0
+color = Color(0, 0, 0, 1)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
